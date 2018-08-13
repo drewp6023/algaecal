@@ -1,0 +1,179 @@
+$roboto: 'Roboto', sans-serif;
+$algae-cal-blue: #7fc5d1;
+$algae-cal-green: #4c813d;
+$selected-blue: #008ba4;
+
+html {
+	font-size: 16px; 
+	line-height: 1.5;
+	font-family: $roboto;
+
+	body {
+
+		.algae-cal-blue {
+			color: $algae-cal-blue;
+		}
+
+		.algae-cal-green {
+			color: $algae-cal-green;
+		}
+
+		.flex-space {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;			
+		}
+
+		.product-container.box-shadow {
+			-webkit-box-shadow: 0px 0px 10px 3px rgba(168,168,168,1);
+			-moz-box-shadow: 0px 0px 10px 3px rgba(168,168,168,1);
+			box-shadow: 0px 0px 10px 3px rgba(168,168,168,1);				
+		}
+
+		.product-container {
+			padding: 0 0.5rem 0.5rem;
+			margin-bottom: 3rem;
+			position: relative;		
+		}
+
+		#header-section {
+
+			#logo {
+				margin-left: -0.6rem;
+			}
+
+			img[alt="Tap to Talk"] {
+				margin-bottom: 1rem;
+			}
+		}
+
+		#intro-section {
+			padding: 1rem;
+			background-image: url(/algaecal/images/green-bg.png);
+			color: white;
+		}
+
+		#products-section {
+
+			.product-container {
+				padding: 0 0.5rem 0.5rem;
+				margin-bottom: 3rem;
+				position: relative;
+
+				div.content {
+					background-color: white;
+					color: black;
+					padding: 1rem;
+				}
+
+				.orange-circle {
+					position: absolute;
+					top: -30px;
+    				right: -20px;
+					width: 20vw;
+				}
+
+				&.selected {
+					background-color: $selected-blue;
+					color: white;
+				}
+			}
+
+			.product-container.selected {
+				background-color: $selected-blue;
+			}
+		}
+
+		#video-section {
+
+			margin-bottom: 2rem;
+
+			#vs-copy {
+				margin: 1rem auto;
+			}
+
+			#youtube-video {
+				position: relative;
+
+				#tap-to-play {
+					position: absolute;
+					top: 50%;
+					left: 60%;
+					transform: translate(-50%, -50%);
+					width: 50vw;
+				}
+			}			
+		}
+
+		#guarantee-section {
+			background-image: url(/algaecal/images/green-bg.png);
+		}
+
+		#book-section {
+			margin: 2rem 0;
+
+			.product-container {
+				padding: 0;
+
+				> div:first-child {
+					background-color: $algae-cal-green;
+					color: white;
+					font-weight: 700;
+					padding: 0.3rem;
+				}	
+
+				#icons-n-books-wrapper {
+					padding: 1rem;
+
+					#icons-wrapper {
+						margin-bottom: 1rem;
+					}
+
+					#books-wrapper {
+						img {
+							width: 40%;
+						}
+					}
+				}							
+			}
+		}
+
+		#references-section {
+			#sr-title,
+			#full-rl a {
+				font-weight: 700;
+				font-size: 1.3rem;
+			}
+
+			#full-rl a {
+				text-decoration: underline;
+			}
+
+			#reference-wrapper {
+				padding: 0 75vw;
+			}
+		}
+
+		#bnb-section {
+			margin: 1rem 0;
+		}
+
+		#footer-section {
+			margin-bottom: 2rem;
+
+			#footer-menu {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+
+				> li {
+
+				}
+			}
+
+			#copyrite {
+				margin-top: 1rem;
+			}
+		}
+	}
+}

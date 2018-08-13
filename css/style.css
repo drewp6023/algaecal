@@ -1,0 +1,93 @@
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif; }
+  html body .algae-cal-blue {
+    color: #7fc5d1; }
+  html body .algae-cal-green {
+    color: #4c813d; }
+  html body .flex-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  html body .product-container.box-shadow {
+    -webkit-box-shadow: 0px 0px 10px 3px #a8a8a8;
+    -moz-box-shadow: 0px 0px 10px 3px #a8a8a8;
+    box-shadow: 0px 0px 10px 3px #a8a8a8; }
+  html body .product-container {
+    padding: 0 0.5rem 0.5rem;
+    margin-bottom: 3rem;
+    position: relative; }
+  html body #header-section #logo {
+    margin-left: -0.6rem; }
+  html body #header-section img[alt="Tap to Talk"] {
+    margin-bottom: 1rem; }
+  html body #intro-section {
+    padding: 1rem;
+    background-image: url(/algaecal/images/green-bg.png);
+    color: white; }
+  html body #products-section .product-container {
+    padding: 0 0.5rem 0.5rem;
+    margin-bottom: 3rem;
+    position: relative; }
+    html body #products-section .product-container div.content {
+      background-color: white;
+      color: black;
+      padding: 1rem; }
+    html body #products-section .product-container .orange-circle {
+      position: absolute;
+      top: -30px;
+      right: -20px;
+      width: 20vw; }
+    html body #products-section .product-container.selected {
+      background-color: #008ba4;
+      color: white; }
+  html body #products-section .product-container.selected {
+    background-color: #008ba4; }
+  html body #video-section {
+    margin-bottom: 2rem; }
+    html body #video-section #vs-copy {
+      margin: 1rem auto; }
+    html body #video-section #youtube-video {
+      position: relative; }
+      html body #video-section #youtube-video #tap-to-play {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        width: 50vw; }
+  html body #guarantee-section {
+    background-image: url(/algaecal/images/green-bg.png); }
+  html body #book-section {
+    margin: 2rem 0; }
+    html body #book-section .product-container {
+      padding: 0; }
+      html body #book-section .product-container > div:first-child {
+        background-color: #4c813d;
+        color: white;
+        font-weight: 700;
+        padding: 0.3rem; }
+      html body #book-section .product-container #icons-n-books-wrapper {
+        padding: 1rem; }
+        html body #book-section .product-container #icons-n-books-wrapper #icons-wrapper {
+          margin-bottom: 1rem; }
+        html body #book-section .product-container #icons-n-books-wrapper #books-wrapper img {
+          width: 40%; }
+  html body #references-section #sr-title,
+  html body #references-section #full-rl a {
+    font-weight: 700;
+    font-size: 1.3rem; }
+  html body #references-section #full-rl a {
+    text-decoration: underline; }
+  html body #references-section #reference-wrapper {
+    padding: 0 75vw; }
+  html body #bnb-section {
+    margin: 1rem 0; }
+  html body #footer-section {
+    margin-bottom: 2rem; }
+    html body #footer-section #footer-menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+    html body #footer-section #copyrite {
+      margin-top: 1rem; }
