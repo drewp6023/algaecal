@@ -1,5 +1,5 @@
 $roboto: 'Roboto', sans-serif;
-$algae-cal-blue: #7fc5d1;
+$algae-cal-blue: #40a8bb;
 $algae-cal-green: #4c813d;
 $selected-blue: #008ba4;
 
@@ -10,6 +10,14 @@ html {
 
 	body {
 
+		h1 {
+			margin: 48px auto;
+		}
+
+		h2 {
+			margin: 24px auto;
+		}
+
 		.algae-cal-blue {
 			color: $algae-cal-blue;
 		}
@@ -19,32 +27,55 @@ html {
 		}
 
 		.flex-space {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			align-items: center;
-			justify-content: space-around;			
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-ms-flex-pack: distribute;
+			    justify-content: space-around;			
 		}
 
-		.product-container.box-shadow {
-			-webkit-box-shadow: 0px 0px 10px 3px rgba(168,168,168,1);
-			-moz-box-shadow: 0px 0px 10px 3px rgba(168,168,168,1);
-			box-shadow: 0px 0px 10px 3px rgba(168,168,168,1);				
-		}
-
-		.product-container {
-			padding: 0 0.5rem 0.5rem;
-			margin-bottom: 3rem;
-			position: relative;		
+		.flex-center {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
 		}
 
 		#header-section {
+			padding: 1rem 0;
 
-			#logo {
-				margin-left: -0.6rem;
+			.container {
+
+				.row {
+					/* First column */
+					div[class*='col']:first-child {
+						#logo {
+							margin-left: -0.6rem;
+						}
+					}
+
+					/* Second column */
+					div[class*='col']:nth-child(2) {
+						#speak-to-specialists {
+							display: none;
+
+							#speak-span {
+								font-size: 0.8rem;
+							}							
+						}							
+					}
+				}			
 			}
 
-			img[alt="Tap to Talk"] {
-				margin-bottom: 1rem;
-			}
+
 		}
 
 		#intro-section {
@@ -54,33 +85,18 @@ html {
 		}
 
 		#products-section {
+			.container {
+				#products-wrapper {
+					display: none;
 
-			.product-container {
-				padding: 0 0.5rem 0.5rem;
-				margin-bottom: 3rem;
-				position: relative;
-
-				div.content {
-					background-color: white;
-					color: black;
-					padding: 1rem;
-				}
-
-				.orange-circle {
-					position: absolute;
-					top: -30px;
-    				right: -20px;
-					width: 20vw;
-				}
-
-				&.selected {
-					background-color: $selected-blue;
-					color: white;
-				}
-			}
-
-			.product-container.selected {
-				background-color: $selected-blue;
+					.product-container {
+						text-align: center;
+					}				
+				}		
+				
+				h2.nf-title {
+					font-size: 1.5rem;
+				}		
 			}
 		}
 
@@ -99,42 +115,44 @@ html {
 					position: absolute;
 					top: 50%;
 					left: 60%;
-					transform: translate(-50%, -50%);
+					-webkit-transform: translate(-50%, -50%);
+					    -ms-transform: translate(-50%, -50%);
+					        transform: translate(-50%, -50%);
 					width: 50vw;
 				}
 			}			
 		}
 
 		#guarantee-section {
-			background-image: url(/algaecal/images/green-bg.png);
+			margin: 2rem 0;
+
+			.container {
+				> div[class*='col'] {
+					background-image: url(/algaecal/images/green-bg.png);
+					padding: 1rem;
+
+					.white-bg {
+						background: white;
+						padding: 1rem;
+
+						#sev-yr-title {
+							font-size: 1.5rem;
+							color: orange;
+							font-weight: 700;
+						}
+
+						#sev-yr-copy {
+							font-size: 0.9rem;
+						}
+					}					
+				}
+			}
+
 		}
 
 		#book-section {
-			margin: 2rem 0;
-
-			.product-container {
-				padding: 0;
-
-				> div:first-child {
-					background-color: $algae-cal-green;
-					color: white;
-					font-weight: 700;
-					padding: 0.3rem;
-				}	
-
-				#icons-n-books-wrapper {
-					padding: 1rem;
-
-					#icons-wrapper {
-						margin-bottom: 1rem;
-					}
-
-					#books-wrapper {
-						img {
-							width: 40%;
-						}
-					}
-				}							
+			img {
+				width: 100%;
 			}
 		}
 
@@ -152,6 +170,12 @@ html {
 			#reference-wrapper {
 				padding: 0 75vw;
 			}
+
+			.container {
+				> div:last-child {
+					margin: 1rem 0;
+				}
+			}
 		}
 
 		#bnb-section {
@@ -161,13 +185,33 @@ html {
 		#footer-section {
 			margin-bottom: 2rem;
 
+			img[alt="Logo"] {
+				margin: 1rem 0;
+			}
+
 			#footer-menu {
 				margin: 0;
 				padding: 0;
 				list-style-type: none;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+				-ms-flex-wrap: wrap;
+				    flex-wrap: wrap;
 
 				> li {
+					a {
+						color: gray;
+						padding-right: 0.5rem;						
+					}
 
+					&:not(:last-child) {
+						margin-right: 0.5rem;	
+						border-right: 1px solid gray;					
+					}
 				}
 			}
 

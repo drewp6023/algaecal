@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="//fast.wistia.com/embed/medias/cecdwaq3dz.jsonp" async></script>
@@ -25,12 +25,15 @@
 <body>
     <section id="header-section">
         <div class="container">
-            <div class="col-xs-12 col-md-6">
-                <img id="logo" class="img-fluid" alt="Responsive Logo" src="/algaecal/images/logo.png">
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <img class="img-fluid" alt="Tap to Talk" src="/algaecal/images/tap_to_talk.png">
-            </div>      
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <img id="logo" class="img-fluid" alt="Responsive Logo" src="/algaecal/images/logo.png">
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div><span class="font-weight-bold">Tap to Talk</span> <a href="tel:+1-800-820-0184"><span id="default-phone" class="algae-cal-blue font-weight-bold"></span></a></div>
+                    <div id="speak-to-specialists"><img class="img-fluid d-inline-block" src="/algaecal/images/green_phone_elipse.png"> <span id="speak-span">Speak to our Bone Health Specialists!</span></div>
+                </div>                            
+            </div>    
         </div>
     </section>
 
@@ -48,7 +51,7 @@
                 <div id="youtube-video">
                     <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                         <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                            <div class="wistia_embed wistia_async_cecdwaq3dz videoFoam=true " style="height:100%;width:100%">&nbsp;</div>
+                            <div class="wistia_embed wistia_async_cecdwaq3dz videoFoam=true autoPlay=false" style="height:100%;width:100%">&nbsp;</div>
                         </div>
                     </div>      
                     <img id="tap-to-play" alt="Tap to Play" class="img-fluid" src="/algaecal/images/tap_to_play.png">
@@ -56,87 +59,59 @@
             </div>        
         </div>
     </section>
-    <section id="products-section">
+    <section id="products-section" name="products-section">
         <div class="container">
-            <div class="product-container box-shadow text-center">
-                <img alt="3 Month Orange Circle" class="orange-circle" src="/algaecal/images/orange_3_month_circle.png">
-                <div class="content">
-                    <div>
-                        <div>3 Month Supply</div>
-                        <div class="algae-cal-blue">4 AlgaeCal Plus</div>
-                        <div class="algae-cal-blue">3 Strontium Boost</div>
-                    </div>
-                    <div class="bottles">
-                        <img alt="Bottles 1" class="img-fluid" src="/algaecal/images/bottles_1.png" />
-                    </div>
-                    <div>
-                        
-                    </div>                        
-                </div>
+
+            <div id="products-wrapper" class="row">
+                <div class="col-xs-12 col-md-4 product-container"><a href=""><img class="img-fluid" src="/algaecal/images/3_month_full.png" /></a></div>
+                <div class="col-xs-12 col-md-4 product-container"><a href=""><img class="img-fluid" src="/algaecal/images/6_month_full.png" /></a></div>
+                <div class="col-xs-12 col-md-4 product-container"><a href=""><img class="img-fluid" src="/algaecal/images/12_month_full.png" /></a></div>                
             </div>
-            <div class="product-container box-shadow text-center selected">
-                <div class="text-center text-uppercase">MOST POPULAR</div>
-                <img alt="6 Month Orange Circle" class="orange-circle" src="/algaecal/images/orange_6_month_circle.png">
-                <div class="content">
-                    <div>
-                        <div>6 Month Supply</div>
-                        <div class="algae-cal-blue">8 AlgaeCal Plus</div>
-                        <div class="algae-cal-blue">6 Strontium Boost</div>
-                    </div>
-                    <div class="bottles">
-                        <img alt="Bottles 2" class="img-fluid" src="/algaecal/images/bottles_2.png" />
-                    </div>
-                    <div>
-                        
-                    </div>                    
-                </div>
-            </div>            
-            <div class="product-container box-shadow text-center">
-                <img alt="12 Month Orange Circle" class="orange-circle" src="/algaecal/images/orange_12_month_circle.png">
-                <div class="content">
-                    <div>
-                        <div>12 Month Supply</div>
-                        <div class="algae-cal-blue">16 AlgaeCal Plus</div>
-                        <div class="algae-cal-blue">12 Strontium Boost</div>
-                    </div>
-                    <div class="bottles">
-                        <img alt="Bottles 3" class="img-fluid" src="/algaecal/images/bottles_3.png" />
-                    </div>
-                    <div>
-                        
-                    </div>                    
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div><img class="img-fluid" src="/algaecal/images/ac_facts_new.png" /></div>
-            </div>
-            <div class="col-xs-12">
-                <div><img class="img-fluid" src="/algaecal/images/sb_facts.png" /></div>
-            </div>  
+
+            <h2 class="font-weight-bold text-center nf-title">AlgaeCal Plus</h2>
+            <table id="alagaecal-plus-nf" class="nutrition-fact">
+                    
+            </table>
+
+            <h2 class="font-weight-bold text-center nf-title">Strontonium Boost</h2>
+            <table id="strontium-boost-nf" class="nutrition-fact">
+                
+            </table>
         </div>        
+    </section>
+
+    <section id="guarantee-section">
+        <div class="container">
+            <div class="col-xs-12">
+                <!-- <img class="img-fluid" src="/algaecal/images/guarantee_section.png" /> -->
+                <div class="white-bg">
+                    <div class="text-center"><img class="img-fluid" id="gold-medal-lg" src="" /></div>
+                    <div>
+                        <h2 id="sev-yr-title"></h2>
+                        <span id="sev-yr-copy"></span>
+                    </div>
+                    <div class="text-center">
+                        <img class="img-fluid" src="/algaecal/images/dean_neuls.png" />
+                    </div>
+                </div>
+            </div>         
+        </div>
     </section>
 
     <section id="book-section">
         <div class="container">
-            <div class="box-shadow product-container">
-                <div class="text-center">As Seen On:</div>
-                <div id="icons-n-books-wrapper">
-                    <div id="icons-wrapper" class="flex-space">
-                        <img alt="Oz Icon" class="img-fluid" src="/algaecal/images/oz_icon.png" />
-                        <img alt="Fox Icon" class="img-fluid" src="/algaecal/images/fox_icon.png" />
-                        <img alt="PBS Icon" class="img-fluid" src="/algaecal/images/pbs_icon.png" />
-                        <img alt="Amz Icon" class="img-fluid" src="/algaecal/images/amz_icon.png" />
-                    </div>    
-                    <div id="books-wrapper" class="flex-space">
-                        <img alt="Forever Young Book" class="img-fluid" src="/algaecal/images/forever_young_book.png" />
-                        <img alt="Your Bones Book" class="img-fluid" src="/algaecal/images/your_bones_book.png" />
-                    </div>                        
-                </div>          
-            </div>          
+            <div class="col-xs-12"><img class="img-fluid" src="/algaecal/images/books_section.png" /></div>
         </div>
     </section>
 
     <section id="references-section">
+        <div class="container">
+            <div class="col-xs-12"><img class="img-fluid" src="/algaecal/images/references_section.png" /></div>         
+            <div class="text-center"><u class="algae-cal-blue">View Full Reference List...</u></div>
+        </div>        
+    </section>
+
+<!--     <section id="references-section">
         <div class="container">
             <div id="sr-title" class="algae-cal-blue text-center">Scientific References</div>
             <div id="references-wrapper">
@@ -152,10 +127,10 @@
                 <a href="" class="algae-cal-blue">View Full Reference List...</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <div class="container text-center">
-        <a href=""><img class="img-fluid" src="/algaecal/images/buy_now_button.png" alt="Buy Now Button"></a>        
+        <a href="#products-section"><img class="img-fluid" src="/algaecal/images/buy_now_button.png" alt="Buy Now Button"></a>        
     </div>
 
     <section id="footer-section" class="text-center">
@@ -163,11 +138,11 @@
 
         <div>
             <ul id="footer-menu">
-                <li>Shipping & Returns</li>
-                <li>Health Disclaimer</li>
-                <li>Legal and Privacy Policy</li>
-                <li>Contact</li>
-                <li>Order Now</li>
+                <li><a href="#">Shipping & Returns</li></a>
+                <li><a href="#">Health Disclaimer</li></a>
+                <li><a href="#">Legal and Privacy Policy</li></a>
+                <li><a href="#">Contact</li></a>
+                <li><a href="#">Order Now</li></a>
             </ul>            
         </div>
 
@@ -176,16 +151,111 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal fade" id="guarantee-modal" tabindex="-1" role="dialog" aria-labelledby="Guarantee Modal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+
     <script type="text/javascript">
         $(document).ready(function() {
-            // AlgaeCal Module
-            var AlgaeCal = (function() {
-                
+            
+            var apiUrl = "https://www.algaecal.com/wp-json/acf/v3/options/options";
 
-                return {
-                    
+            // Grab options and set html text based off response
+            $.get(apiUrl)
+                .then(function(data) {
+                    var data = data.acf;
+                    var defaultPhone = data.default_phone_number;
+                    var now = new Date();
+                    var workingHours = isWorkingHour(now);
+                    var sevenYrTitle = data['7yr_title'];
+                    var sevenYrCopy = data['7yr_short_copy'];
+                    var goldMedal = data.seven_year_guarantee_seal.sizes['thumbnail'];
+
+                    console.log('data', data);
+
+                    // Guarantee section 
+                    $("#gold-medal-lg").attr("src", goldMedal);
+                    $("#sev-yr-title").text(sevenYrTitle);
+                    $("#sev-yr-copy").html(sevenYrCopy).append("Also, if you are unsatisfied at any time you can return my product for a full refund, no questions asked! <u class='algae-cal-blue' data-toggle='modal' data-target='#guarantee-modal'>Click Here for Details</u></a>");
+
+                    // Add default phone number
+                    $("#default-phone").text(defaultPhone);
+
+                    // Modal support
+                    $("#guarantee-modal .modal-title").text(sevenYrTitle);
+                    $("#guarantee-modal .modal-body").html(data['7yr_full_copy']).find("img").addClass("img-fluid");
+
+                    // Show speak-to-specialists block if during working hours
+                    if (workingHours) $("#speak-to-specialists").show();
+                })
+                .catch(function(error) {
+                    console.error(error);
+                });
+
+                function isWorkingHour(now) {
+                    return now.getDay() <= 5 && now.getHours() >= 9 && now.getHours() < 17;
+                }       
+
+            /////////////////////////////////
+            // BEGIN - Wistia Functionality
+            /////////////////////////////////
+
+            window._wq = window._wq || [];
+
+            _wq.push({ 
+                id: "cecdwaq3dz",
+                onReady: function(video) {
+                    // console.log("I got a handle to the video!", video);
+                    var productsWrapper = $("#products-wrapper");
+
+                    if (video.embedded()) {
+                        $("#tap-to-play").on("click", function(e) {
+                            console.log('state', video.state());
+                            if (video.state() === "playing") {
+                                video.pause();
+                            } else if (video.state() == "beforeplay" || video.state() == "paused") {
+                                video.play();
+                                $(this).hide();
+                            }
+                        });
+
+                        video.bind("timechange", function(t) {
+                            if (t > 133) {
+                                productsWrapper.show();
+                            } else {
+                                productsWrapper.hide();
+                            }
+                        });
+
+                        // User click control
+                        video.bind("timechange", 0, 133, function(withinInterval) {
+                            if (withinInterval) {
+                                productsWrapper.hide();
+                            } else {
+                                productsWrapper.show();
+                            }
+                        });                        
+                    }
                 }
-            })();
+            });   
+
+            /////////////////////////////////
+            // END - Wistia Functionality
+            /////////////////////////////////                                  
         });
     </script>
 </body>
