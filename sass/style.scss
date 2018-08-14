@@ -18,6 +18,10 @@ html {
 			margin: 24px auto;
 		}
 
+		.pointer {
+			cursor: pointer;
+		}
+
 		.algae-cal-blue {
 			color: $algae-cal-blue;
 		}
@@ -82,13 +86,31 @@ html {
 			padding: 1rem;
 			background-image: url(/algaecal/images/green-bg.png);
 			color: white;
+			
+			.container {
+				.row {
+					> div[class*='col']:first-child {
+						@media screen and (max-width: 800px) {
+							text-align: center;
+						}
+					}
+
+					#youtube-video {
+						@media screen and (max-width: 800px) {
+							display: none;
+						}
+					}						
+				}
+			}		
 		}
 
 		#products-section {
-			.container {
-				#products-wrapper {
-					display: none;
+			display: none;
 
+			.container {
+
+				#products-wrapper {
+				
 					.product-container {
 						text-align: center;
 						position: relative;
@@ -96,7 +118,6 @@ html {
 						.add-to-cart-button {
 							position: absolute;
 							bottom: 0;
-							margin: 0 auto;
 						}
 					}				
 				}		
@@ -107,12 +128,16 @@ html {
 			}
 		}
 
+		#intro-section,
 		#video-section {
-
-			margin-bottom: 2rem;
 
 			#vs-copy {
 				margin: 1rem auto;
+
+				@media screen and (min-width: 800px) {
+				    font-size: 1.5rem;
+				    text-align: center;					
+				}
 			}
 
 			#youtube-video {
@@ -126,12 +151,21 @@ html {
 					    -ms-transform: translate(-50%, -50%);
 					        transform: translate(-50%, -50%);
 					width: 50vw;
+					max-width: 200px;
 				}
 			}			
 		}
 
+		#video-section {
+			#youtube-video {
+				@media screen and (min-width: 800px) {
+					display: none;
+				}
+			}
+		}
+
 		#guarantee-section {
-			margin: 2rem 0;
+			margin: 0 0 2rem 0;
 
 			.container {
 				> div[class*='col'] {
@@ -150,6 +184,10 @@ html {
 
 						#sev-yr-copy {
 							font-size: 0.9rem;
+
+							@media screen and (min-width: 800px) {
+								text-align: center;
+							}
 						}
 					}					
 				}
@@ -158,16 +196,50 @@ html {
 		}
 
 		#book-section {
-			img {
-				width: 100%;
+			.container {
+				.row {
+					> div[class*='col']:first-child > div	{
+						-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,1);
+						box-shadow: 0px 0px 7px 0px rgba(0,0,0,1);
+						margin-bottom: 2rem;
+
+						#as-seen-title-container {
+							background-color: $algae-cal-green;
+							color: white;
+							font-weight: 700;
+							padding: 0.4rem;
+
+							span {
+								@media screen and (min-width: 800px) {
+									font-size: 1.5rem;
+								}
+							}
+						}
+
+						#books-logos-container {
+							padding: 1rem;
+
+							img {
+								width: 100%;
+								background-color: white;
+							}
+						}												
+					}					
+				}					
 			}
 		}
 
 		#references-section {
+			margin-bottom: 2rem;
+
 			#sr-title,
 			#full-rl a {
 				font-weight: 700;
 				font-size: 1.3rem;
+			}
+
+			#sr-title {
+				margin-bottom: 1rem;
 			}
 
 			#full-rl a {
@@ -180,7 +252,7 @@ html {
 
 			.container {
 				> div:last-child {
-					margin: 1rem 0;
+					margin-top: 1rem;
 				}
 			}
 		}
@@ -226,5 +298,117 @@ html {
 				margin-top: 1rem;
 			}
 		}
+
+		/********** BEGIN - NUTRITION FACTS *****************/
+
+		/*@import "compass/css3";*/
+
+		.performance-facts {
+			border: 1px solid black;
+			width: 280px;
+			padding: 0.5rem;
+			font-size: small;
+			line-height: 1.4;
+			margin: 0 auto;
+
+			table {
+				border-collapse: collapse;
+			}
+		}
+		.performance-facts__title {
+		  font-weight: bold;
+		  font-size: 1.7rem;
+		  margin: 0 0 0.25rem 0;
+		  text-align: center;
+		}
+		.performance-facts__header {
+		  border-bottom: 10px solid black;
+		  padding: 0 0 0.25rem 0;
+		  margin: 0;
+
+		  p {
+		    margin: 0;
+		  }
+		}
+		.performance-facts__table {
+		  width: 100%;
+		  thead tr {
+		    th, td {
+		      border: 0;
+		    }
+		  }
+		  th, td {
+		    font-weight: normal;
+		    text-align: left;
+		    padding: 0.25rem 0;
+		    border-top: 1px solid black; 
+		    white-space: nowrap;
+		  }
+		  td {
+		    &:last-child {
+		      text-align: right;
+		    }
+		  }
+		  .blank-cell {
+		    width: 1rem;
+		    border-top: 0;
+		  }
+		  .thick-row {
+		    th, td {
+		      border-top-width: 5px;
+		    }
+		  }
+		}
+		.small-info {
+		  font-size: 0.7rem;
+		}
+
+		.performance-facts__table--small {
+		  @extend .performance-facts__table;
+		  border-bottom: 1px solid #999;
+		  margin: 0 0 0.5rem 0;
+		  thead {
+		    tr {
+		      border-bottom: 1px solid black; 
+		    }
+		  }
+		  td {
+		    &:last-child {
+		      text-align: left;
+		    }
+		  }
+		  th, td {
+		    border: 0;
+		    padding: 0;
+		  }
+		}
+
+		.performance-facts__table--grid {
+		  @extend .performance-facts__table;
+		  margin: 0 0 0.5rem 0;
+		  td {
+		    &:last-child {
+		      text-align: left;
+		      &::before {
+		        content: "•";
+		        font-weight: bold;
+		        margin: 0 0.25rem 0 0;
+		      }
+		    }
+		  }
+		}
+
+		.text-center {
+		  text-align: center;
+		}
+		.thick-end {
+		  border-bottom: 10px solid black;
+		}
+		.thin-end {
+		  border-bottom: 1px solid black;
+		}
+
+		/********** END - NUTRITION FACTS *****************/
+
 	}
 }

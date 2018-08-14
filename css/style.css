@@ -1,66 +1,84 @@
+@charset "UTF-8";
 html {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif; }
-  html body h1 {
-    margin: 48px auto; }
-  html body h2 {
-    margin: 24px auto; }
-  html body .algae-cal-blue {
-    color: #40a8bb; }
-  html body .algae-cal-green {
-    color: #4c813d; }
-  html body .flex-space {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
-  html body .flex-center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-  html body #header-section {
-    padding: 1rem 0; }
-    html body #header-section .container .row {
-      /* First column */
-      /* Second column */ }
-      html body #header-section .container .row div[class*='col']:first-child #logo {
-        margin-left: -0.6rem; }
-      html body #header-section .container .row div[class*='col']:nth-child(2) #speak-to-specialists {
-        display: none; }
-        html body #header-section .container .row div[class*='col']:nth-child(2) #speak-to-specialists #speak-span {
-          font-size: 0.8rem; }
-  html body #intro-section {
-    padding: 1rem;
-    background-image: url(/algaecal/images/green-bg.png);
-    color: white; }
-  html body #products-section .container #products-wrapper {
-    display: none; }
-    html body #products-section .container #products-wrapper .product-container {
-      text-align: center;
-      position: relative; }
-      html body #products-section .container #products-wrapper .product-container .add-to-cart-button {
-        position: absolute;
-        bottom: 0;
-        margin: 0 auto; }
-  html body #products-section .container h2.nf-title {
-    font-size: 1.5rem; }
-  html body #video-section {
-    margin-bottom: 2rem; }
+  html body {
+    /********** BEGIN - NUTRITION FACTS *****************/
+    /*@import "compass/css3";*/
+    /********** END - NUTRITION FACTS *****************/ }
+    html body h1 {
+      margin: 48px auto; }
+    html body h2 {
+      margin: 24px auto; }
+    html body .pointer {
+      cursor: pointer; }
+    html body .algae-cal-blue {
+      color: #40a8bb; }
+    html body .algae-cal-green {
+      color: #4c813d; }
+    html body .flex-space {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+    html body .flex-center {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    html body #header-section {
+      padding: 1rem 0; }
+      html body #header-section .container .row {
+        /* First column */
+        /* Second column */ }
+        html body #header-section .container .row div[class*='col']:first-child #logo {
+          margin-left: -0.6rem; }
+        html body #header-section .container .row div[class*='col']:nth-child(2) #speak-to-specialists {
+          display: none; }
+          html body #header-section .container .row div[class*='col']:nth-child(2) #speak-to-specialists #speak-span {
+            font-size: 0.8rem; }
+    html body #intro-section {
+      padding: 1rem;
+      background-image: url(/algaecal/images/green-bg.png);
+      color: white; }
+      @media screen and (max-width: 800px) {
+        html body #intro-section .container .row > div[class*='col']:first-child {
+          text-align: center; } }
+      @media screen and (max-width: 800px) {
+        html body #intro-section .container .row #youtube-video {
+          display: none; } }
+    html body #products-section {
+      display: none; }
+      html body #products-section .container #products-wrapper .product-container {
+        text-align: center;
+        position: relative; }
+        html body #products-section .container #products-wrapper .product-container .add-to-cart-button {
+          position: absolute;
+          bottom: 0; }
+      html body #products-section .container h2.nf-title {
+        font-size: 1.5rem; }
+    html body #intro-section #vs-copy,
     html body #video-section #vs-copy {
       margin: 1rem auto; }
+      @media screen and (min-width: 800px) {
+        html body #intro-section #vs-copy,
+        html body #video-section #vs-copy {
+          font-size: 1.5rem;
+          text-align: center; } }
+    html body #intro-section #youtube-video,
     html body #video-section #youtube-video {
       position: relative; }
+      html body #intro-section #youtube-video #tap-to-play,
       html body #video-section #youtube-video #tap-to-play {
         position: absolute;
         top: 50%;
@@ -68,56 +86,145 @@ html {
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        width: 50vw; }
-  html body #guarantee-section {
-    margin: 2rem 0; }
-    html body #guarantee-section .container > div[class*='col'] {
-      background-image: url(/algaecal/images/green-bg.png);
-      padding: 1rem; }
-      html body #guarantee-section .container > div[class*='col'] .white-bg {
-        background: white;
+        width: 50vw;
+        max-width: 200px; }
+    @media screen and (min-width: 800px) {
+      html body #video-section #youtube-video {
+        display: none; } }
+    html body #guarantee-section {
+      margin: 0 0 2rem 0; }
+      html body #guarantee-section .container > div[class*='col'] {
+        background-image: url(/algaecal/images/green-bg.png);
         padding: 1rem; }
-        html body #guarantee-section .container > div[class*='col'] .white-bg #sev-yr-title {
-          font-size: 1.5rem;
-          color: orange;
-          font-weight: 700; }
-        html body #guarantee-section .container > div[class*='col'] .white-bg #sev-yr-copy {
-          font-size: 0.9rem; }
-  html body #book-section img {
-    width: 100%; }
-  html body #references-section #sr-title,
-  html body #references-section #full-rl a {
-    font-weight: 700;
-    font-size: 1.3rem; }
-  html body #references-section #full-rl a {
-    text-decoration: underline; }
-  html body #references-section #reference-wrapper {
-    padding: 0 75vw; }
-  html body #references-section .container > div:last-child {
-    margin: 1rem 0; }
-  html body #bnb-section {
-    margin: 1rem 0; }
-  html body #footer-section {
-    margin-bottom: 2rem; }
-    html body #footer-section img[alt="Logo"] {
+        html body #guarantee-section .container > div[class*='col'] .white-bg {
+          background: white;
+          padding: 1rem; }
+          html body #guarantee-section .container > div[class*='col'] .white-bg #sev-yr-title {
+            font-size: 1.5rem;
+            color: orange;
+            font-weight: 700; }
+          html body #guarantee-section .container > div[class*='col'] .white-bg #sev-yr-copy {
+            font-size: 0.9rem; }
+            @media screen and (min-width: 800px) {
+              html body #guarantee-section .container > div[class*='col'] .white-bg #sev-yr-copy {
+                text-align: center; } }
+    html body #book-section .container .row > div[class*='col']:first-child > div {
+      -webkit-box-shadow: 0px 0px 7px 0px black;
+      box-shadow: 0px 0px 7px 0px black;
+      margin-bottom: 2rem; }
+      html body #book-section .container .row > div[class*='col']:first-child > div #as-seen-title-container {
+        background-color: #4c813d;
+        color: white;
+        font-weight: 700;
+        padding: 0.4rem; }
+        @media screen and (min-width: 800px) {
+          html body #book-section .container .row > div[class*='col']:first-child > div #as-seen-title-container span {
+            font-size: 1.5rem; } }
+      html body #book-section .container .row > div[class*='col']:first-child > div #books-logos-container {
+        padding: 1rem; }
+        html body #book-section .container .row > div[class*='col']:first-child > div #books-logos-container img {
+          width: 100%;
+          background-color: white; }
+    html body #references-section {
+      margin-bottom: 2rem; }
+      html body #references-section #sr-title,
+      html body #references-section #full-rl a {
+        font-weight: 700;
+        font-size: 1.3rem; }
+      html body #references-section #sr-title {
+        margin-bottom: 1rem; }
+      html body #references-section #full-rl a {
+        text-decoration: underline; }
+      html body #references-section #reference-wrapper {
+        padding: 0 75vw; }
+      html body #references-section .container > div:last-child {
+        margin-top: 1rem; }
+    html body #bnb-section {
       margin: 1rem 0; }
-    html body #footer-section #footer-menu {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-      html body #footer-section #footer-menu > li a {
-        color: gray;
-        padding-right: 0.5rem; }
-      html body #footer-section #footer-menu > li:not(:last-child) {
-        margin-right: 0.5rem;
-        border-right: 1px solid gray; }
-    html body #footer-section #copyrite {
-      margin-top: 1rem; }
+    html body #footer-section {
+      margin-bottom: 2rem; }
+      html body #footer-section img[alt="Logo"] {
+        margin: 1rem 0; }
+      html body #footer-section #footer-menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        html body #footer-section #footer-menu > li a {
+          color: gray;
+          padding-right: 0.5rem; }
+        html body #footer-section #footer-menu > li:not(:last-child) {
+          margin-right: 0.5rem;
+          border-right: 1px solid gray; }
+      html body #footer-section #copyrite {
+        margin-top: 1rem; }
+    html body .performance-facts {
+      border: 1px solid black;
+      width: 280px;
+      padding: 0.5rem;
+      font-size: small;
+      line-height: 1.4;
+      margin: 0 auto; }
+      html body .performance-facts table {
+        border-collapse: collapse; }
+    html body .performance-facts__title {
+      font-weight: bold;
+      font-size: 1.7rem;
+      margin: 0 0 0.25rem 0;
+      text-align: center; }
+    html body .performance-facts__header {
+      border-bottom: 10px solid black;
+      padding: 0 0 0.25rem 0;
+      margin: 0; }
+      html body .performance-facts__header p {
+        margin: 0; }
+    html body .performance-facts__table, html body .performance-facts__table--small, html body .performance-facts__table--grid {
+      width: 100%; }
+      html body .performance-facts__table thead tr th, html body .performance-facts__table--small thead tr th, html body .performance-facts__table--grid thead tr th, html body .performance-facts__table thead tr td, html body .performance-facts__table--small thead tr td, html body .performance-facts__table--grid thead tr td {
+        border: 0; }
+      html body .performance-facts__table th, html body .performance-facts__table--small th, html body .performance-facts__table--grid th, html body .performance-facts__table td, html body .performance-facts__table--small td, html body .performance-facts__table--grid td {
+        font-weight: normal;
+        text-align: left;
+        padding: 0.25rem 0;
+        border-top: 1px solid black;
+        white-space: nowrap; }
+      html body .performance-facts__table td:last-child, html body .performance-facts__table--small td:last-child, html body .performance-facts__table--grid td:last-child {
+        text-align: right; }
+      html body .performance-facts__table .blank-cell, html body .performance-facts__table--small .blank-cell, html body .performance-facts__table--grid .blank-cell {
+        width: 1rem;
+        border-top: 0; }
+      html body .performance-facts__table .thick-row th, html body .performance-facts__table--small .thick-row th, html body .performance-facts__table--grid .thick-row th, html body .performance-facts__table .thick-row td, html body .performance-facts__table--small .thick-row td, html body .performance-facts__table--grid .thick-row td {
+        border-top-width: 5px; }
+    html body .small-info {
+      font-size: 0.7rem; }
+    html body .performance-facts__table--small {
+      border-bottom: 1px solid #999;
+      margin: 0 0 0.5rem 0; }
+      html body .performance-facts__table--small thead tr {
+        border-bottom: 1px solid black; }
+      html body .performance-facts__table--small td:last-child {
+        text-align: left; }
+      html body .performance-facts__table--small th, html body .performance-facts__table--small td {
+        border: 0;
+        padding: 0; }
+    html body .performance-facts__table--grid {
+      margin: 0 0 0.5rem 0; }
+      html body .performance-facts__table--grid td:last-child {
+        text-align: left; }
+        html body .performance-facts__table--grid td:last-child::before {
+          content: "•";
+          font-weight: bold;
+          margin: 0 0.25rem 0 0; }
+    html body .text-center {
+      text-align: center; }
+    html body .thick-end {
+      border-bottom: 10px solid black; }
+    html body .thin-end {
+      border-bottom: 1px solid black; }
