@@ -91,6 +91,13 @@ html {
 
 					.product-container {
 						text-align: center;
+						position: relative;
+
+						.add-to-cart-button {
+							position: absolute;
+							bottom: 0;
+							margin: 0 auto;
+						}
 					}				
 				}		
 				
