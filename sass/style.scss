@@ -74,7 +74,21 @@ html {
 							#speak-span {
 								font-size: 0.8rem;
 							}							
-						}							
+						}
+
+						@media screen and (min-width: 800px) {
+							display: -webkit-box;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-box-pack: center;
+							    -ms-flex-pack: center;
+							        justify-content: center;
+							-webkit-box-align: center;
+							    -ms-flex-align: center;
+							        align-items: center;
+							-ms-flex-wrap: wrap;
+							    flex-wrap: wrap;
+						}
 					}
 				}			
 			}
@@ -93,19 +107,14 @@ html {
 						@media screen and (max-width: 800px) {
 							text-align: center;
 						}
-					}
-
-					#youtube-video {
-						@media screen and (max-width: 800px) {
-							display: none;
-						}
-					}						
+					}				
 				}
 			}		
 		}
 
 		#products-section {
 			display: none;
+			margin-bottom: 2rem;
 
 			.container {
 
@@ -144,9 +153,10 @@ html {
 				position: relative;
 
 				#tap-to-play {
+					display: none;
 					position: absolute;
 					top: 50%;
-					left: 60%;
+					left: 50%;
 					-webkit-transform: translate(-50%, -50%);
 					    -ms-transform: translate(-50%, -50%);
 					        transform: translate(-50%, -50%);
@@ -157,11 +167,7 @@ html {
 		}
 
 		#video-section {
-			#youtube-video {
-				@media screen and (min-width: 800px) {
-					display: none;
-				}
-			}
+			margin-bottom: 2rem;
 		}
 
 		#guarantee-section {
@@ -218,10 +224,19 @@ html {
 
 						#books-logos-container {
 							padding: 1rem;
+							background-color: white;
 
-							img {
-								width: 100%;
-								background-color: white;
+							div:first-child {
+							    display: flex;
+							    justify-content: space-around;
+							    align-items: center;
+							    margin-bottom: 1rem;
+							}
+
+							div:last-child {
+							    display: flex;
+							    justify-content: space-around;
+							    align-items: center;
 							}
 						}												
 					}					
@@ -235,7 +250,7 @@ html {
 			#sr-title,
 			#full-rl a {
 				font-weight: 700;
-				font-size: 1.3rem;
+				font-size: 1.5rem;
 			}
 
 			#sr-title {

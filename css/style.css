@@ -47,6 +47,19 @@ html {
           display: none; }
           html body #header-section .container .row div[class*='col']:nth-child(2) #speak-to-specialists #speak-span {
             font-size: 0.8rem; }
+        @media screen and (min-width: 800px) {
+          html body #header-section .container .row div[class*='col']:nth-child(2) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
     html body #intro-section {
       padding: 1rem;
       background-image: url(/algaecal/images/green-bg.png);
@@ -54,11 +67,9 @@ html {
       @media screen and (max-width: 800px) {
         html body #intro-section .container .row > div[class*='col']:first-child {
           text-align: center; } }
-      @media screen and (max-width: 800px) {
-        html body #intro-section .container .row #youtube-video {
-          display: none; } }
     html body #products-section {
-      display: none; }
+      display: none;
+      margin-bottom: 2rem; }
       html body #products-section .container #products-wrapper .product-container {
         text-align: center;
         position: relative; }
@@ -80,17 +91,17 @@ html {
       position: relative; }
       html body #intro-section #youtube-video #tap-to-play,
       html body #video-section #youtube-video #tap-to-play {
+        display: none;
         position: absolute;
         top: 50%;
-        left: 60%;
+        left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 50vw;
         max-width: 200px; }
-    @media screen and (min-width: 800px) {
-      html body #video-section #youtube-video {
-        display: none; } }
+    html body #video-section {
+      margin-bottom: 2rem; }
     html body #guarantee-section {
       margin: 0 0 2rem 0; }
       html body #guarantee-section .container > div[class*='col'] {
@@ -121,16 +132,23 @@ html {
           html body #book-section .container .row > div[class*='col']:first-child > div #as-seen-title-container span {
             font-size: 1.5rem; } }
       html body #book-section .container .row > div[class*='col']:first-child > div #books-logos-container {
-        padding: 1rem; }
-        html body #book-section .container .row > div[class*='col']:first-child > div #books-logos-container img {
-          width: 100%;
-          background-color: white; }
+        padding: 1rem;
+        background-color: white; }
+        html body #book-section .container .row > div[class*='col']:first-child > div #books-logos-container div:first-child {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 1rem; }
+        html body #book-section .container .row > div[class*='col']:first-child > div #books-logos-container div:last-child {
+          display: flex;
+          justify-content: space-around;
+          align-items: center; }
     html body #references-section {
       margin-bottom: 2rem; }
       html body #references-section #sr-title,
       html body #references-section #full-rl a {
         font-weight: 700;
-        font-size: 1.3rem; }
+        font-size: 1.5rem; }
       html body #references-section #sr-title {
         margin-bottom: 1rem; }
       html body #references-section #full-rl a {
