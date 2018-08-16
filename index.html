@@ -314,8 +314,6 @@
                     var sevenYrCopy = data['7yr_short_copy'];
                     var goldMedal = data.seven_year_guarantee_seal.sizes['thumbnail'];
 
-                    console.log('data', data);
-
                     // Guarantee section 
                     $("#gold-medal-lg").attr("src", goldMedal);
                     $("#sev-yr-title").text(sevenYrTitle);
@@ -367,7 +365,7 @@
                         $("#tap-to-play").show();
 
                         $("#tap-to-play").on("click", function(e) {
-                            console.log('state', video.state());
+                            
                             if (video.state() === "playing") {
                                 video.pause();
                             } else if (video.state() == "beforeplay" || video.state() == "paused") {
